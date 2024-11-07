@@ -1,0 +1,26 @@
+Một công ty điện thoại cần xây dựng một chương trình tính tiền điện thoại cho các khách hàng. Hiện tại, công ty có lưu trữ 2 tệp tin, một tệp về khách hàng, một tệp về các cuộc điện thoại đã gọi của khách hàng.
+1. Tệp khách hàng có tên khachhang.txt. Mỗi dòng của tệp này gồm có:
+Tên khách hàng; số điện thoại
+- Tên của khách hàng: tên là một xâu ký tự, độ dài không vượt quá 25 và kết thúc bởi dấu “;”.
+- Số điện thoại của khách hàng gồm 10 chữ số bắt đầu bằng chữ số 0
+Ví dụ:
+Nguyen Anh Tuấn; 0987654233
+Le Nhat Anh; 0967456321
+…
+2. Tệp lưu trữ các cuộc điện thoại có tên cuocgoi.txt. Mỗi dòng có những thông tin về một cuộc điện thoại như sau:
+Số điện thoại; Số phút; Thời điểm bắt đầu gọi; Ngày gọi (dd/mm/yyyy); Vùng
+(Vùng: nội hạt, lân cận, xa và rất xa, được viết tắt là: NH, LC, X, RX).
+Ví dụ:
+0987654233; 4; 8h23; 14/010/2018; NH
+0987654233; 6; 15h10; 19/10/2018; LC
+0967456321; 1; 23h05; 15/10/2018; RX
+                                         ….
+Hãy sử dụng cấu trúc dữ liệu thích hợp viết chương trình tính tiền điện thoại theo yêu cầu sau:
+- Đọc thông tin trong tệp khachhang.txt và cuocgoi.txt, tính tiền cho từng khách hàng và ghi ra tệp ketqua.txt, mỗi dòng có các thông tin sau:
+Tên KH; số đt; Số tiền, số cuộc gọi NH, số gọi LC, số cuộc X, số cuộc gọi RX.
+Cách tính tiền cho mỗi cuộc gọi như sau:
+Tiền = Giá cơ bản * Số phút * Hệ số miền. 
+Giá cơ bản là 1.100 đồng 1 phút.
+Hệ số miền đối với nội hạt là 1, với lân cận là 2, với xa là 3, với rất xa là 4.
+Đối với các cuộc gọi bắt đầu từ 23h00 đến 5h00 các ngày trong tuần và ngày Thứ Bảy, Chủ nhật thì được giảm giá 30%.
+Lưu ý: trong danh sách cuộc gọi mỗi khách có thể có nhiều cuộc gọi hoặc không có cuộc gọi nào.
